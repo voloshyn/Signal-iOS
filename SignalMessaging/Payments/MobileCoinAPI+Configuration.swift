@@ -22,11 +22,11 @@ extension MobileCoinAPI {
                 return .signalMainNet
             } else if FeatureFlags.paymentsInternalBeta {
                 // TODO: Revisit.
-                #if TESTABLE_BUILD
-                return .mobileCoinAlphaNet
-                #else
+                //#if TESTABLE_BUILD
+                //return .mobileCoinAlphaNet
+                //#else
                 return .signalTestNet
-                #endif
+                //#endif
             } else {
                 return .mobileCoinAlphaNet
             }

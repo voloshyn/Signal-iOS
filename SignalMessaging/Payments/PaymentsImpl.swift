@@ -110,16 +110,20 @@ public class PaymentsImpl: NSObject, PaymentsSwift {
     }
 
     public var canEnablePayments: Bool {
-        guard FeatureFlags.paymentsEnabled else {
+        return true
+/*        guard FeatureFlags.paymentsEnabled else {
             return false
         }
         guard !isKillSwitchActive else {
             return false
         }
         return hasValidPhoneNumberForPayments
+        */
     }
 
     private var hasValidPhoneNumberForPayments: Bool {
+        return true
+          /*
         guard Self.tsAccountManager.isRegisteredAndReady else {
             return false
         }
@@ -148,6 +152,7 @@ public class PaymentsImpl: NSObject, PaymentsSwift {
             49
         ]
         return validCountryCodes.contains(nsCountryCode.intValue)
+        */
     }
 
     public var isKillSwitchActive: Bool {

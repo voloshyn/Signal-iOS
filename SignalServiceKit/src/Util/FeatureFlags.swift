@@ -108,11 +108,7 @@ public class FeatureFlags: BaseFlags {
 
     @objc
     public static var isUsingProductionService: Bool {
-        if paymentsInternalBeta {
-            return false
-        } else {
-            return true
-        }
+        return false
     }
 
     @objc
@@ -140,13 +136,13 @@ public class FeatureFlags: BaseFlags {
     public static let supportAnimatedStickers_AnimatedWebp = true
 
     @objc
-    public static let paymentsInternalBeta = false
+    public static let paymentsInternalBeta = true
 
     @objc
     public static let paymentsBeta = true
 
     @objc
-    public static let paymentsEnabled = paymentsBeta
+    public static let paymentsEnabled = true
 
     @objc
     public static let paymentsRequests = false
